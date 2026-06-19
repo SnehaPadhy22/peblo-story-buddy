@@ -2,36 +2,80 @@
 
 ## Overview
 
-A Flutter-based interactive storytelling application designed for children. The app narrates a short story and then presents a data-driven quiz based on the story content.
+Peblo Story Buddy is a Flutter-based interactive storytelling application designed for children. The application presents a short story experience followed by an engaging quiz to reinforce comprehension and learning.
 
-## Framework
+## Tech Stack
 
-Flutter
-
-## State Management
-
-Provider
+* Flutter
+* Dart
+* Provider (State Management)
 
 ## Features
 
-* Interactive story flow
-* Loading state before story completion
-* Data-driven quiz rendering from JSON
-* Wrong answer feedback with shake animation
-* Confetti celebration on correct answer
-* Responsive child-friendly UI
+* Interactive storytelling experience
+* Loading state during story narration
+* Data-driven quiz rendering from JSON data
+* Multiple-choice quiz questions
+* Shake animation for incorrect answers
+* Confetti celebration for correct answers
+* Next Question and Retry functionality
+* Child-friendly responsive user interface
 
-## Architecture
+## Project Architecture
 
-The quiz content is loaded from a JSON data source (`quiz_data.dart`) rather than being hardcoded in the UI, allowing support for different questions and option counts without code changes.
+The application follows a modular structure:
+
+* `screens/` – UI screens
+* `widgets/` – Reusable UI components
+* `providers/` – State management using Provider
+* `data/` – Quiz data source (`quiz_data.dart`)
+
+Quiz content is loaded dynamically from a JSON-like data source rather than being hardcoded into the UI, making the application scalable and easy to extend.
+
+## State Management
+
+Provider is used for managing:
+
+* Loading states
+* Quiz visibility
+* Success states
+* Shake animation triggers
+* Quiz reset functionality
 
 ## Performance Considerations
 
-* Lightweight UI
-* Provider-based state management
-* Minimal widget rebuilds
+* Lightweight widget tree
+* Efficient state updates using Provider
+* Minimal unnecessary rebuilds
 * Suitable for mid-range Android devices
+
+## Setup Instructions
+
+1. Clone the repository
+2. Run:
+
+```bash
+flutter pub get
+```
+
+3. Start the application:
+
+```bash
+flutter run
+```
 
 ## AI Usage
 
-AI tools were used to assist with Flutter architecture, state management patterns, and animation implementation. Generated code was reviewed, tested, and adapted manually.
+AI tools were used to assist with:
+
+* Flutter architecture planning
+* State management implementation
+* UI enhancement suggestions
+* Animation implementation guidance
+
+All generated code was reviewed, tested, modified, and integrated manually.
+
+## Repository
+
+GitHub Repository:
+https://github.com/SnehaPadhy22/peblo-story-buddy
